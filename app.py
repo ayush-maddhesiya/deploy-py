@@ -1,4 +1,5 @@
 from flask import Flask, render_template,jsonify, request
+from controller import you_name, you_name2, you_name3
 
 app = Flask(__name__)
 
@@ -18,6 +19,17 @@ def api():
     }
     return jsonify(data)
 
+@app.route('/name', methods=['get'])
+def name():
+    return you_name()
+
+@app.route('/name2', methods=['get'])
+def name2():
+    return you_name2()
+
+@app.route('/name3', methods=['get'])
+def name3():
+    return you_name3()
+
 if __name__ == '__main__':
     app.run(debug=True)
-
