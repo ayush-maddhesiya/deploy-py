@@ -1,6 +1,5 @@
 def you_name():
-  incoming_data = request.json
-  name = incoming_data["name"]
+  name = "Ayush"
   return f'Hello {name}'
 
 def you_name2():
